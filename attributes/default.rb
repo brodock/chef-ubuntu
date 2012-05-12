@@ -24,4 +24,5 @@ when "ubuntu"
   default[:ubuntu][:backports_repository] = false
   default[:ubuntu][:partner_repository] = false
   default[:ubuntu][:extras_repository] = false
+  default[:ubuntu][:unattended_upgrades] = true
 end

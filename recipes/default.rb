@@ -25,3 +25,9 @@ template "/etc/apt/sources.list" do
   notifies :run, resources(:execute => "apt-get update"), :immediately
   source "sources.list.erb"
 end
+
+if node[:ubuntu][:unattended_upgrades]
+  package('unattended-upgrades') { action :install }
+else
+  package('unattended-upgrades') { action :remove }
+end

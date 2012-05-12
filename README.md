@@ -24,6 +24,7 @@ See `attributes/default.rb` for default values.
 * `node['ubuntu']['backports_repository']` - enable backports repository
 * `node['ubuntu']['partner_repository']` - enable canonical partner's repository
 * `node['ubuntu']['extras_repository']` - enable extras repository
+* `node['ubuntu']['unattended_upgrades']` - enable unattended upgrades (for security updates)
 
 There is also a `attributes/brasil.rb` which defaults archive_url and
 security_url to a mirror hosted by edugraf.ufsc.br.
