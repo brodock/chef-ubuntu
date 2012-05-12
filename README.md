@@ -21,6 +21,9 @@ See `attributes/default.rb` for default values.
 
 * `node['ubuntu']['archive_url']` - archived package repo URL
 * `node['ubuntu']['security_url']` - security update package repo URL
+* `node['ubuntu']['backports_repository']` - enable backports repository
+* `node['ubuntu']['partner_repository']` - enable canonical partner's repository
+* `node['ubuntu']['extras_repository']` - enable extras repository
 
 Recipes
 =======

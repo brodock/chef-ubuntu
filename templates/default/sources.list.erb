@@ -8,8 +8,27 @@ deb-src <%= node['ubuntu']['archive_url'] %> <%= @code_name %> main restricted u
 deb <%= node['ubuntu']['archive_url'] %> <%= @code_name %>-updates main restricted universe multiverse
 deb-src <%= node['ubuntu']['archive_url'] %> <%= @code_name %>-updates main restricted universe multiverse
 
-# 
+ 
 # Security updates 
-#
 deb <%= node['ubuntu']['security_url'] %> <%= @code_name %>-security main restricted universe multiverse 
 deb-src <%= node['ubuntu']['security_url'] %> <%= @code_name %>-security main restricted universe multiverse 
+
+<% if node['ubuntu']['backports_repository'] %>
+# Backported applications
+deb <%= node['ubuntu']['archive_url'] %> <%= @code_name %>-backports main restricted universe multiverse
+deb-src <%= node['ubuntu']['archive_url'] %> <%= @code_name %>-backports main restricted universe multiverse
+<% end %>
+
+<% if node['ubuntu']['partner_repository'] %>
+# This software is not part of Ubuntu, but is offered by Canonical and the
+# respective vendors as a service to Ubuntu users.
+deb http://archive.canonical.com/ubuntu <%= @code_name %> partner
+deb-src http://archive.canonical.com/ubuntu <%= @code_name %> partner
+<% end %>
+
+<% if node['ubuntu']['extras_repository'] %>
+## This software is not part of Ubuntu, but is offered by third-party
+## developers who want to ship their latest software.
+deb http://extras.ubuntu.com/ubuntu <%= @code_name %> main
+deb-src http://extras.ubuntu.com/ubuntu <%= @code_name %> main
+<% end %>
