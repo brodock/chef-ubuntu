@@ -25,6 +25,9 @@ See `attributes/default.rb` for default values.
 * `node['ubuntu']['partner_repository']` - enable canonical partner's repository
 * `node['ubuntu']['extras_repository']` - enable extras repository
 
+There is also a `attributes/brasil.rb` which defaults archive_url and
+security_url to a mirror hosted by edugraf.ufsc.br.
+
 Recipes
 =======
 
@@ -44,13 +47,18 @@ sources.list. Currently the template enables main, restricted,
 universe and multiverse for the node's codename (e.g., lucid, natty,
 etc). See __Roadmap__.
 
+If you want to use `brasil` default attributes, please use include
+`recipe[ubuntu::brasil]` instead.
+
 License and Author
 ==================
 
 Author:: Adam Jacob <adam@opscode.com>
 Author:: Joshua Timberman <joshua@opscode.com>
+Author:: Gabriel Mazetto <brodock@gmail.com>
 
 Copyright:: 2008-2011, Opscode, Inc
+Copyright:: 2012-2012, Gabriel Mazetto
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
