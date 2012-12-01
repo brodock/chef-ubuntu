@@ -5,7 +5,7 @@
 
 case platform
 when "ubuntu"
-  default[:ubuntu][:archive_url]  = "http://espelhos.edugraf.ufsc.br/ubuntu"
-  default[:ubuntu][:security_url] = "http://espelhos.edugraf.ufsc.br/ubuntu"
+  normal[:ubuntu][:archive_url]  = "http://espelhos.edugraf.ufsc.br/ubuntu"
+  normal[:ubuntu][:security_url] = "http://espelhos.edugraf.ufsc.br/ubuntu"
 end
 
