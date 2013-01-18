@@ -26,6 +26,8 @@ template "/etc/apt/sources.list" do
   source "sources.list.erb"
 end
 
+package('language-pack-pt') { action :install }
+
 if node[:ubuntu][:unattended_upgrades]
   package('unattended-upgrades') { action :install }
 else
