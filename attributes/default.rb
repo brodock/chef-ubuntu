@@ -19,10 +19,10 @@
 
 case platform
 when "ubuntu"
-  default[:ubuntu][:archive_url]  = "http://archive.ubuntu.com/ubuntu"
-  default[:ubuntu][:security_url] = "http://security.ubuntu.com/ubuntu"
-  default[:ubuntu][:backports_repository] = false
-  default[:ubuntu][:partner_repository] = false
-  default[:ubuntu][:extras_repository] = false
-  default[:ubuntu][:unattended_upgrades] = true
+  default['ubuntu']['archive_url']  = "http://archive.ubuntu.com/ubuntu"
+  default['ubuntu']['security_url'] = "http://security.ubuntu.com/ubuntu"
+  default['ubuntu']['backports_repository'] = false
+  default['ubuntu']['partner_repository'] = false
+  default['ubuntu']['extras_repository'] = false
+  default['ubuntu']['unattended_upgrades'] = true
 end
